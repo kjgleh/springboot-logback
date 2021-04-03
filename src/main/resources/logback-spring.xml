@@ -1,0 +1,12 @@
+<configuration>
+    <appender name="TEST_CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <Pattern>%d %-4relative [%thread] %-5level %logger{35} - %msg%n</Pattern>
+        </encoder>
+    </appender>
+
+    <logger name="MY_LOGGER" level="INFO" additivity="false">
+        <appender-ref ref="TEST_CONSOLE"/>
+    </logger>
+</configuration>
