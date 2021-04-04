@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.springframework.boot") version "2.4.4"
+    id("org.springframework.boot") version "2.3.9.RELEASE"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.4.31"
     kotlin("plugin.spring") version "1.4.31"
@@ -24,6 +24,10 @@ dependencies {
 
     // kotlin logging
     implementation("io.github.microutils:kotlin-logging:2.0.6")
+
+    // AwsLogsAppender
+    implementation("org.slf4j:slf4j-api:1.7.30")
+    implementation("ca.pjer:logback-awslogs-appender:1.4.0")
 }
 
 tasks.withType<KotlinCompile> {
